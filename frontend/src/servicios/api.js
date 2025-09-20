@@ -1,6 +1,5 @@
 
 // src/servicios/api.js
-// Cambia la URL por la de tu backend en Render para producción
 const API_BASE = "https://ejemplo-despliegue-l8jy.onrender.com/api/";
 
 async function toJSON(res) {
