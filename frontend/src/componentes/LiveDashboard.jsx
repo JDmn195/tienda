@@ -6,7 +6,7 @@ import {
   LineChart, Line, CartesianGrid,
 } from "recharts";
 
-const API_BASE = import.meta.env?.VITE_API_URL || "http://127.0.0.1:5001/api";
+const API_BASE = "https://ejemplo-despliegue-l8jy.onrender.com/api/";
 
 export default function LiveDashboard({ days=30, initialMetric="cantidad", limit=6, top=5, fallbackMs=15000 }) {
   const [metric, setMetric] = useState(initialMetric);

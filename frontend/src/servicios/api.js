@@ -1,6 +1,7 @@
 
 // src/servicios/api.js
-const API_BASE = import.meta.env?.VITE_API_URL || "http://127.0.0.1:5001/api";
+// Cambia la URL por la de tu backend en Render para producción
+const API_BASE = "https://ejemplo-despliegue-l8jy.onrender.com/api/";
 
 async function toJSON(res) {
   const txt = await res.text();
