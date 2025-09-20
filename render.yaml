@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: minitienda-backend
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn app:app"
+    envVars:
+      - key: PORT
+        value: 10000
+    plan: free
+    rootDir: backend
+
+  - type: static
+    name: minitienda-frontend
+    buildCommand: "npm install && npm run build"
+    staticPublishPath: dist
+    envVars: []
+    plan: free
+    rootDir: frontend
