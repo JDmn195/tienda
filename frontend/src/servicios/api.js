@@ -1,6 +1,6 @@
 
 // src/servicios/api.js
-const API_BASE = "https://ejemplo-despliegue-l8jy.onrender.com";
+const API_BASE = import.meta.env?.VITE_API_URL || "https://ejemplo-despliegue-l8jy.onrender.com";
 
 async function toJSON(res) {
   const txt = await res.text();
